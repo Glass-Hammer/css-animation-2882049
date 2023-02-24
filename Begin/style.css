@@ -2,13 +2,39 @@
 
 @keyframes scaleIn {
   0% {
-    scale: 0.2;
+    transform: translate(-400%,-200px) scale(0.2) rotate(0deg);
+    animation-timing-function: ease-in;
   }
-  85% {
-    scale: 1.1;
+  20% {
+    transform: translate(-200%,-200px) scale(0.35) rotate(360deg);
+    animation-timing-function: cubic-bezier(.63, 1.67, .41, 1.01);
+  }
+  40% {
+    transform: translate(0%,-200px) scale(1) rotate(720deg);
+    animation-timing-function: cubic-bezier(.63, 1.67, .41, 1.01);
+  }
+  55% {
+    transform: translate(0px,-200px) scale(1) rotate(720deg);
+    animation-timing-function: ease-in;
+  }
+  70% {
+    transform: translateY(0px) rotate(720deg);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    transform: translateY(-90px) rotate(720deg);
+    animation-timing-function: ease-in;
+  }
+  94% {
+    transform: translateY(0px) rotate(720deg);
+    animation-timing-function: ease-out;
+  }
+  97% {
+    transform: translateY(-40px) rotate(720deg);
+    animation-timing-function: ease-in;
   }
   100% {
-    scale: 1;
+    transform: translateY(0px) rotate(720deg);
   }
 }
 
@@ -17,10 +43,9 @@ h2 {
   font-family: "Fira Sans", sans-serif;
   color: #DCF2B0;
   text-shadow: 3px 3px 0px #59C3C3;
+  ;
 
-  animation-name: scaleIn;
-  animation-duration: 2s;
-  animation-fill-mode: backwards;
+  animation: scaleIn 1.5s linear both;
 }
 
 .wrap {
